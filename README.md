@@ -1,12 +1,10 @@
-# Stochastic Book Recommender 📚
+# Stochastic Book Recommender
 
 A hybrid book recommendation system that optimizes feature weights using **Stochastic Hill Climbing** to maximize recommendation accuracy (**Hit@10**). 
 
-This project moves beyond simple metadata matching by integrating **BERT (RoBERTa) embeddings** for semantic title analysis and **TF-IDF** for user-generated tags, achieving a +31.5% performance boost over uniform weight baselines.
+This project integrating **BERT (RoBERTa) embeddings** for semantic title analysis and **TF-IDF** for user-generated tags, achieving a +33% performance boost over uniform weight baselines.
 
-
-
-## 🛠 Project Structure
+## Project Structure
 
 The pipeline is organized into sequentially numbered scripts to ensure reproducibility:
 
@@ -23,25 +21,25 @@ The pipeline is organized into sequentially numbered scripts to ensure reproduci
 
 
 
-## 🚀 Key Features
+## Key Features
 
-* **Hybrid Semantic Search**: Combines deep learning latent spaces (Title) with statistical NLP (Tags).
-* **Automated Weight Tuning**: Learns that "not all features are created equal"—automatically prioritizing Tags and Authors over less predictive numerical metadata.
+* **Hybrid Semantic Search**: Combines deep learning latent spaces (Title) with TF-IDF (Tags).
+* **Automated Weight Tuning**: Learns that "not all features are created equal", automatically prioritizing Tags and Authors over less predictive numerical metadata.
 * **Custom Scoring**: A non-linear transformation function $w(r)$ that aggressively rewards 5-star ratings and penalizes disliked content.
 
-## 📊 Results
+## Results
 
 | Approach | Optimization | Hit@10 | Improvement |
 | :--- | :--- | :--- | :--- |
 | Uniform Weights | Manual Baseline | 0.1315 | - |
-| **Optimized Weights** | **Grid Search + SHC** | **0.1730** | **+31.5%** |
+| **Optimized Weights** | **Grid Search + SHC** | **0.1750** | **+33%** |
 
 ## 📦 Requirements
 
 * Python 3.8+
 * `scikit-learn`
 * `sentence-transformers` (all-distilroberta-v1)
-* `pandas`, `numpy`, `scipy`
+* `pandas`, `numpy`, `scipy`, `kagglehub`
 
 ---
 *Developed by David Vrba as part of a research-oriented approach to content-based filtering.*
