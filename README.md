@@ -34,7 +34,7 @@ The pipeline is organized into sequentially numbered scripts to ensure reproduci
 | Uniform Weights | Manual Baseline | 0.1315 | - |
 | **Optimized Weights** | **Grid Search + SHC** | **0.1750** | **+33%** |
 
-## 📦 Requirements
+## Requirements
 
 * Python 3.8+
 * `scikit-learn`
@@ -42,4 +42,4 @@ The pipeline is organized into sequentially numbered scripts to ensure reproduci
 * `pandas`, `numpy`, `scipy`, `kagglehub`
 
 ---
-*Developed by David Vrba as part of a research-oriented approach to content-based filtering.*
+*Developed by David Vrba as part of 2-INF-150 Machine Learning course.*
