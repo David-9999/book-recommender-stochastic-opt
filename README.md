@@ -41,5 +41,14 @@ The pipeline is organized into sequentially numbered scripts to ensure reproduci
 * `sentence-transformers` (all-distilroberta-v1)
 * `pandas`, `numpy`, `scipy`, `kagglehub`
 
+##Future Improvements
+* **Refined Validation Strategy**: Instead of random Leave-One-Out (LOO), transition to a "Highest-Rated-Out" approach. This ensures the model is optimized to predict books a user is statistically likely to love, rather than just any book they happened to interact with.
+
+* **Advanced Evaluation Metrics**: Incorporate NDCG (Normalized Discounted Cumulative Gain) or MRR (Mean Reciprocal Rank) to measure not just if a book was recommended, but how high it ranked in the top-10 list.
+
+* **Enhanced NLP Pipeline**: Implement more aggressive tag denoising using NER (Named Entity Recognition) or LLM-based summarization to filter out low-signal user tags that current frequency-based pruning might miss.
+
+* **Temporal Weighting**: Introduce a "Recency Decay" factor to give higher priority to a user's more recent reading habits, reflecting evolving tastes over time.
+
 ---
 *Developed by David Vrba as part of 2-INF-150 Machine Learning course.*
